@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">Add redevable</div>
+  <div class="card-body">
+
+    <div class="form-group">
+      <label for="cin">CIN</label>
+      <input id="cin" type="text" class="form-control" placeholder="Entrer le CIN" [(ngModel)]="redevable.cin">
+    </div>
+
+    <div class="form-group">
+      <label for="prenom">Prenom</label>
+      <input id="prenom" type="text" class="form-control" placeholder="Entrer le nom" [(ngModel)]="redevable.prenom">
+    </div>
+
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input id="nom" type="text" class="form-control" placeholder="Entrer le prenom" [(ngModel)]="redevable.nom">
+    </div>
+
+
+  </div>
+  <div class="card-footer" class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn  btn-outline-warning " (click)="save()">Add</button>
+  </div>
+
+</div>
