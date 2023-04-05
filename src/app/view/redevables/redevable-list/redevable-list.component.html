@@ -1,0 +1,45 @@
+
+<div class="container">
+  <div class="row">
+    <div class="search" >
+      <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search By CIN">
+    </div>
+
+  </div>
+
+</div>
+<div class="card">
+  <div class="card-header"> Liste des Redevables</div>
+  <div class="card-body">
+    <table class="table  table-bordered table-hover table-striped "> <!--*ngIf="redevables.length != 0"-->
+      <thead>
+      <th>CIN</th>
+      <th>Nom</th>
+      <th>Prenom</th>
+      <th>Action</th>
+      </thead>
+      <tbody class="table-group-divider">
+      <tr *ngFor="let r of redevables | filter: searchText ; index as i " >
+        <td>{{r.cin}}</td>
+        <td>{{r.nom}}</td>
+        <td>{{r.prenom}}</td>
+        <td><span (click)="deleteByCin(r,i)" class="fa fa-trash btn btn-sm btn-danger" ></span></td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
